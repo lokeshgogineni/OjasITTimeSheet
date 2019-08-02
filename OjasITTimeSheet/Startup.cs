@@ -9,6 +9,10 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Ojas.DataAccessLayer.DataRepository;
+using Ojas.DataAccessLayer.Entites;
+using Ojas.DataAccessLayer.Interfaces;
+using Ojas.TimeSheet.BusinessLayer;
 
 namespace OjasITTimeSheet
 {
@@ -33,6 +37,9 @@ namespace OjasITTimeSheet
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddScoped<IRegistrationBL, RegistrationBL>();
+            services.AddScoped<IDataRepository<Registration>, UserRegistration>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

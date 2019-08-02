@@ -3,12 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Ojas.TimeSheet.BusinessLayer;
+using Ojas.TimeSheet.BusinessModel;
 
 namespace OjasITTimeSheet.Controllers
 {
     public class SuperAdminController : Controller
     {
-        
+        private IRegistrationBL _businessLayer;
+
+        public SuperAdminController(IRegistrationBL businessLayer)
+        {
+            _businessLayer = businessLayer;
+        }
 
         public IActionResult Dashboard()
         {
@@ -18,6 +25,20 @@ namespace OjasITTimeSheet.Controllers
         public IActionResult CreateUser()
         {
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult CreateUser(UserRegistrationModel model)
+        {
+            try
+            {
+                _businessLayer.RegisterUser(model);
+                return View(true);
+            }
+            catch(Exception ex)
+            {
+                return View(ex);
+            }
         }
 
         public IActionResult CreateAdmin()

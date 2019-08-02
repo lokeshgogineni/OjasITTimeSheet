@@ -118,10 +118,83 @@
         </tr>
     </table>
 </div>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
-    function fn()
-    {
-        alert('Create User');
+
+    function fn() {
+        debugger;
+        var model = {
+            Name: $('#txtName').val(),
+            Email: $('#txtEmailId').val(),
+            MobileNumber: $('#txtMobile').val(),
+            UserName: $('#txtUName').val(),
+            Password: $('#txtPassword').val(),
+            ConfirmPassoword: $('#txtCPassword').val()
+        };
+
+        //$.ajax({
+        //    type: "POST",
+        //    url: "/SuperAdmin/CreateUser",
+        //    contentType: "application/json; charset=utf-8",
+        //    dataType: "json",
+        //    data: model,
+        //    success: function (data) {
+        //        alert('Data Inserted!');
+        //    },
+        //    error: function (err) {
+        //        alert(err);
+        //    }
+
+        //});
+        $.ajax({
+            type: "POST",
+            url:"/SuperAdmin/CreateUser",
+            content: "application/json;charset=utf-8",
+            dataType: "json",
+            data: model,
+            success: function (d) {
+                alert(d.message);
+
+            },
+
+            error: function (xhr, textstatus, errorThhrown) {
+
+                alert("Error");
+
+            }
+
+        });
+
     }
+
+    //function fn()
+    //{
+    //    alert('msg');
+    //    var model = {
+    //        Name: $('#txtName').val(),
+
+    //        Email: $('#txtEmailId').val(),
+    //        MobileNumber: $('#txtMobile').val(),
+    //        UserName: $('#txtUName').val(),
+    //        Password: $('#txtPassword').val(),
+    //        ConfirmPassoword: $('#txtCPassword').val()
+    //    };
+    //    debugger;
+    //    $.ajax({
+    //        type: "POST",
+    //        url: "/SuperAdmin/CreateUser",
+    //        cache: false,
+    //        dataType: "json",
+    //        contentType: "application/json; charset=utf-8",
+    //         objURM : model,
+    //        success: function (data) {
+    //            alert("Addedd Successfully");
+
+    //        },
+    //        error: function (error) {
+    //            alert(error);
+    //        }
+
+    //    });
+    //}
 </script>
