@@ -1,0 +1,125 @@
+﻿
+@{
+    ViewData["Title"] = "TimeSheetExport";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>TimeSheetExport</h2>
+
+<div class=" row">
+    <div class="col-sm-8">
+        <div class="tab">
+            <div class="panel panel-default">
+                <div class="panel-heading">AllTimeSheet</div>
+                <div class="panel-body" style="width:100%;">
+                    <div>
+                        <div class="form-group has-success col-md-2">
+                            <label class="control-label" for="inputSuccess1">ProjectName</label>
+                            <input type="text" class="form-control" id="inputSuccess1">
+                        </div>
+                        <div class="form-group has-warning col-md-3">
+                            <label class="control-label" for="inputWarning1">PurposeorReason</label>
+                            <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="1"></textarea>
+                        </div>
+                        <div class="form-group has-error col-md-3">
+                            <label class="control-label" for="inputError1">FromDate</label>
+                            <input type="text" class="form-control" id="inputError1">
+                        </div>
+                        <div class="form-group has-error col-md-3">
+                            <label class="control-label" for="inputError1">ToDate</label>
+                            <input type="text" class="form-control" id="inputError1">
+                        </div>
+
+                    </div>
+                    <div>
+                        <div class="form-group has-error col-md-2">
+                            <label class="control-label" for="inputError1">VoucherID</label>
+                            <input type="text" class="form-control" id="inputError1">
+                        </div>
+
+                        <div class="form-group has-success col-md-3">
+                            <label class="control-label" for="inputSuccess1">HotelBills</label>
+                            <input type="text" class="form-control" id="inputSuccess1">
+                        </div>
+                        <div class="form-group has-warning col-md-3">
+                            <label class="control-label" for="inputWarning1">TravellBills</label>
+                            <input type="text" class="form-control" id="inputWarning1">
+                        </div>
+                        <div class="form-group has-error col-md-3">
+                            <label class="control-label" for="inputError1">MealsBills</label>
+                            <input type="text" class="form-control" id="inputError1">
+                        </div>
+                    </div>
+                    <div class="form-group has-error col-md-2">
+                        <label class="control-label" for="inputError1">LandlineBills</label>
+                        <input type="text" class="form-control" id="inputError1">
+                    </div>
+
+
+                    <div class="form-group has-error col-md-3">
+                        <label class="control-label" for="inputError1">TransportBills</label>
+                        <input type="text" class="form-control" id="inputError1">
+                    </div>
+                    <div class="form-group has-error col-md-3">
+                        <label class="control-label" for="inputError1">MobileBills</label>
+                        <input type="text" class="form-control" id="inputError1">
+                    </div>
+                    <div class="form-group has-error col-md-3">
+                        <label class="control-label" for="inputError1">Miscellaneous</label>
+                        <input type="text" class="form-control" id="inputError1">
+
+                    </div>
+
+                    <div class="form-group has-error col-md-2">
+                        <label class="control-label" for="inputError1">TotalAmounts</label>
+                        <input type="text" class="form-control" id="inputError1">
+                    </div>
+
+                    <div class="form-group has-error col-md-3">
+                        <label class="control-label" for="inputError1">CreatedOn</label>
+                        <input type="text" class="form-control" id="inputError1">
+                    </div>
+                    <div class="form-group has-warning col-md-3">
+                        <label class="control-label" for="inputWarning1">ExpenseStatus</label>
+                        @*<textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="1"></textarea>*@
+                        <input type="text" class="form-control" id="inputError1">
+                    </div>
+                    <div class="form-group has-warning col-md-3">
+                        <label class="control-label" for="inputWarning1">Download</label>
+                        @*<textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="1"></textarea>*@
+                        <input type="text" class="form-control" id="inputError1">
+                    </div>
+                    <div class="form-group has-warning col-md-2">
+                        <label class="control-label" for="inputWarning1">Comments</label>
+                    </div>
+                        <div class="form-group has-warning col-md-3">
+                            <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="1"></textarea>
+
+
+                        </div>
+
+
+
+                        <div class="form-group has-warning col-md-2">
+
+                            <input type="button" class="btn btn-success" value="CreateUser">
+                        </div>
+                        <div class="form-group has-warning col-md-2">
+
+                            <input type="button" class="btn btn-danger" value="Clear">
+                        </div>
+                        <div class="form-group has-warning col-md-2">
+
+                            <input type="submit" class="btn btn-info" value="AllUsers">
+                        </div>
+
+                    </div>
+                
+            </div>
+
+
+        </div>
+
+
+    </div>
+    </div>

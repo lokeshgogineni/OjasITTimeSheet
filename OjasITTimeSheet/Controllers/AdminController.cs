@@ -8,15 +8,32 @@ namespace OjasITTimeSheet.Controllers
 {
     public class AdminController : Controller
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
+        
 
         public IActionResult AdminDashboard()
         {
             return View();
         }
 
+        public IActionResult AllTimeSheet()
+        {
+            return View();
+        }
+        public IActionResult AllExpense()
+        {
+            return View();
+        }
+        public IActionResult YourTeam()
+        {
+            return View();
+        }
+        public IActionResult TimeSheetExport()
+        {
+            return View();
+        }
+        public IActionResult ExpenseReport()
+        {
+            return View();
+        }
     }
 }

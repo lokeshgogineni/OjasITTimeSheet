@@ -8,12 +8,30 @@ namespace OjasITTimeSheet.Controllers
 {
     public class UserController : Controller
     {
-        public IActionResult Index()
+        
+
+        public IActionResult UserDashboard()
         {
             return View();
         }
 
-        public IActionResult UserDashboard()
+        public IActionResult TimeSheet()
+        {
+            return View();
+        }
+        public IActionResult AllTimeSheet()
+        {
+            return View();
+        }
+        public IActionResult Expense()
+        {
+            return View();
+        }
+        public IActionResult AllExpense()
+        {
+            return View();
+        }
+        public IActionResult ChangePassword()
         {
             return View();
         }

@@ -49,8 +49,81 @@
     <![endif]-->
     <!-- The fav icon -->
     <link rel="shortcut icon" href="~/img/logo1.png">
+
+    <style>
+        input[type=text] {
+            padding: 12px 20px;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        canvas {
+            /*prevent interaction with the canvas*/
+            pointer-events: none;
+        }
+    </style>
+    <script>
+var code;
+function createCaptcha() {
+  //clear the contents of captcha div first
+  document.getElementById('captcha').innerHTML = "";
+  var charsArray =
+  "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!#$%^&*";
+  var lengthOtp = 6;
+  var captcha = [];
+  for (var i = 0; i < lengthOtp; i++) {
+    //below code will not allow Repetition of Characters
+    var index = Math.floor(Math.random() * charsArray.length + 1); //get the next character from the array
+    if (captcha.indexOf(charsArray[index]) == -1)
+      captcha.push(charsArray[index]);
+    else i--;
+  }
+  var canv = document.createElement("canvas");
+  canv.id = "captcha";
+  canv.width = 100;
+  canv.height = 50;
+  var ctx = canv.getContext("2d");
+  ctx.font = "25px Georgia";
+  ctx.strokeText(captcha.join(""), 0, 30);
+  //storing captcha so that can validate you can save it somewhere else according to your specific requirements
+  code = captcha.join("");
+  document.getElementById("captcha").appendChild(canv); // adds the canvas to the body element
+}
+function validateCaptcha() {
+  event.preventDefault();
+  debugger
+  if (document.getElementById("cpatchaTextBox").value == code) {
+      alert("Valid Captcha");
+      if ($('#txtUsername').val() == "superadmin") {
+          window.location.href = "https://localhost:44333/SuperAdmin/Dashboard";
+      }
+      if ($('#txtUsername').val() == "admin") {
+          window.location.href = "https://localhost:44333/Admin/AdminDashboard";
+      }
+      if ($('#txtUsername').val() == "user") {
+          window.location.href = "https://localhost:44333/User/UserDashboard";
+      }
+  }else{
+    alert("Invalid Captcha. try Again");
+    createCaptcha();
+  }
+}
+
+    </script>
 </head>
-<body>
+<body onload="createCaptcha()">
     <div class="ch-container">
         <div class="row">
 
@@ -65,7 +138,7 @@
                     <div class="alert alert-info">
                         Please login with your Username and Password.
                     </div>
-                    <form class="form-horizontal" action="" method="post">
+                    <form class="form-horizontal" action="" method="post" onsubmit="validateCaptcha()">
                         <fieldset>
                             <div class="input-group input-group-lg">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-user red"></i></span>
@@ -76,21 +149,25 @@
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-lock red"></i></span>
                                 <input type="password" class="form-control" placeholder="Password">
                             </div>
+                            <div id="captcha">
+                            </div>
+                            <input type="text" placeholder="Captcha" id="cpatchaTextBox" />
+                            
                             <div class="clearfix"></div>
                             <div class="input-prepend">
                                 <label class="remember" for="remember"><input type="checkbox" id="remember"> Remember me</label>
                             </div>
-                            @*<div class="clearfix"></div>
-                <p class="center col-md-5">
-                    <button type="submit" class="btn btn-primary">Login</button>
-                </p>*@
+                            <div class="clearfix"></div>
+        <p class="center col-md-5">
+            <button type="submit" class="btn btn-primary">Login</button>
+        </p>
                         </fieldset>
                     </form>
 
-                    <div class="clearfix"></div>
+                    @*<div class="clearfix"></div>
                     <p class="center col-md-5">
                         <button type="submit" class="btn btn-primary" onclick="fn()">Login</button>
-                    </p>
+                    </p>*@
                 </div>
                 <!--/span-->
             </div><!--/row-->

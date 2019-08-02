@@ -1,0 +1,176 @@
+﻿
+@{
+    ViewData["Title"] = "Expense";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<h2>Expense</h2>
+
+<div>
+    <table border="1" class="table table-striped table-bordered bootstrap-datatable datatable responsive">
+        <tr>
+            <th colspan="4">Expense Details</th>
+        </tr>
+        <tr>
+            <td class="center">
+                <div class="form-group has-success">
+                    <label class="control-label" for="inputSuccess1">Project</label>
+                    
+                    <select class="form-control">
+                        <option>Project1</option>
+                        <option>Project2</option>
+                        <option>Project3</option>
+                        <option>Project4</option>
+                    </select>
+                        
+                    
+
+                </div>
+
+
+            </td>
+            <td class="center">
+                <div class="form-group has-success">
+                    <label class="control-label" for="inputSuccess1">Purpose Reason</label>
+                    <input type="text" class="form-control" id="txtMobile">
+                </div>
+
+            </td>
+            <td class="center">
+                <div class="form-group has-success">
+                    <label class="control-label" for="inputSuccess1">Expense From Date</label>
+                    <input type="date" class="form-control" id="txtBDate">
+                </div>
+
+            </td>
+            <td class="center">
+                <div class="form-group has-success">
+                    <label class="control-label" for="inputSuccess1">Expense To Date</label>
+                    <input type="date" class="form-control" id="txtDoj">
+                </div>
+
+            </td>
+
+        </tr>
+        
+    </table>
+    <table border="1" class="table table-striped table-bordered bootstrap-datatable datatable responsive">
+        <tr>
+            <th colspan="4">Type Of Expense</th>
+        </tr>
+        <tr>
+            <td class="center">
+                <div class="form-group has-success">
+                    <label class="control-label" for="inputSuccess1">Hotel</label>
+                    <input type="text" class="form-control" id="txtName">
+                </div>
+
+
+            </td>
+            <td class="center">
+                <div class="form-group has-success">
+                    <label class="control-label" for="inputSuccess1">Meals</label>
+                    <input type="text" class="form-control" id="txtMobile">
+                </div>
+
+            </td>
+            <td class="center">
+                <div class="form-group has-success">
+                    <label class="control-label" for="inputSuccess1">Landline Bills</label>
+                    <input type="text" class="form-control" id="txtEmailId">
+                </div>
+
+            </td>
+            <td class="center">
+                <div class="form-group has-success">
+                    <label class="control-label" for="inputSuccess1">Mobile Bills</label>
+                    <input type="text" class="form-control" id="txtEmailId">
+                </div>
+
+            </td>
+        </tr>
+        <tr>
+            <td class="center">
+                <div class="form-group has-success">
+                    <label class="control-label" for="inputSuccess1">Transport EXpense</label>
+                    <input type="text" class="form-control" id="txtName">
+                </div>
+
+
+            </td>
+            <td class="center">
+                <div class="form-group has-success">
+                    <label class="control-label" for="inputSuccess1">Travel</label>
+                    <input type="text" class="form-control" id="txtMobile">
+                </div>
+
+            </td>
+            <td class="center">
+                <div class="form-group has-success">
+                    <label class="control-label" for="inputSuccess1">Miscellaneous Expense</label>
+                    <input type="text" class="form-control" id="txtEmailId">
+                </div>
+
+            </td>
+            <td class="center">
+                <div class="form-group has-success">
+                    <label class="control-label" for="inputSuccess1">Total Amount</label>
+                    <input type="text" class="form-control" id="txtEmailId">
+                </div>
+
+            </td>
+        </tr>
+        <tr>
+            <td class="center">
+                <div class="form-group has-success">
+                    <label class="control-label" for="inputSuccess1">Expense ID/Voucher ID</label>
+                    <input type="text" class="form-control" id="txtName">
+                </div>
+
+
+            </td>
+            <td class="center">
+                <div class="form-group has-success">
+                    <label class="control-label" for="inputSuccess1">Zip Attachments</label>
+                    <input type="file" class="form-control" id="txtMobile">
+                </div>
+
+            </td>
+            <td class="center">
+                <div class="form-group has-success">
+                    <label class="control-label" for="inputSuccess1">Single Attachment</label>
+                    <input type="file" class="form-control" id="txtEmailId">
+                </div>
+
+            </td>
+            <td class="center">
+                <div class="form-group has-success">
+                    
+                </div>
+
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <label style="color:red">
+                    [Scan Copies Of Hotel,Travel ,Meals,Mobile,transport, Miscellaneous Bills Zip Them and Upload Zip]
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td class="center" colspan="4">
+
+                <a class="btn btn-success" href="#" onclick="fn()">
+                    <i class="glyphicon glyphicon-zoom-in icon-white"></i>
+                    Save Details
+                </a>
+            
+                <a class="btn btn-danger" href="#">
+                    <i class="glyphicon glyphicon-trash icon-white"></i>
+                    Cancle
+                </a>
+            </td>
+            
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,72 @@
+﻿
+@{
+    ViewData["Title"] = "ExpenseReport";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>ExpenseReport</h2>
+
+<div class=" row">
+    <div class="col-sm-8">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>ProjectName</th>
+                    <th>Sunday</th>
+                    <th>Monday</th>
+                    <th>Tuseday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Saturday</th>
+                    <th>Total</th>
+                    <th>Decription</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td>2019-08-01</td>
+                    <td>2019-08-02</td>
+                    <td>2019-08-03</td>
+                    <td>2019-08-04</td>
+                    <td>2019-08-05</td>
+                    <td>2019-08-06</td>
+                    <td>2019-08-07</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Bajaj Pvt Ltd</td>
+                    <td>5</td>
+                    <td>5</td>
+                    <td>5</td>
+                    <td>5</td>
+                    <td>5</td>
+                    <td>5</td>
+                    <td>0</td>
+                    <td>30</td>
+                    <td>5</td>
+
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">AllTimeSheet</div>
+            <div class="panel-body" style="width:100%;">
+                <div>
+                    <label> Comment</label>
+                </div>
+                <textarea rows="4" cols="50"></textarea>
+
+                <div class="container">
+                    <button type="button" class="btn btn-success">Aprove</button>
+                    <button type="button" class="btn btn-success">Reject</button>
+                    <button type="button" class="btn btn-danger">Cancle</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
